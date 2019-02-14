@@ -37,6 +37,10 @@
   },
   "dependencies": {
     "express": "^4.16.4",
+
+    "superagent": "^4.1.0",
+
     "redux-thunk": "^2.3.0"
+
   }
 }
