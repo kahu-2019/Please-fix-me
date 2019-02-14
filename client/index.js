@@ -5,7 +5,6 @@ import { createStore } from "redux";
 
 import reducers from "./reducers";
 import App from "./components/App";
-import Miju from "./components/miju/Miju";
 
 const store = createStore(
   reducers,
