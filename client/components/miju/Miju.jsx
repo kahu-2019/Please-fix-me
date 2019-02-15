@@ -7,27 +7,27 @@ class Miju extends React.Component {
     super(props);
 
     this.state = {
-      random: []
+      random: "",
+      icon: ""
     };
   }
 
   componentDidMount() {
     request.get("https://api.chucknorris.io/jokes/random ").then(res => {
       console.log(res);
-      this.setCunk({
-        random: res.body
+      this.setState({
+        random: res.body.value,
+        icon: res.body.icon_url
       });
     });
   }
   render() {
+    console.log(this.state.random);
     return (
       <div>
         <h1> Chuck Norris facts </h1>
-        <ul>
-          {this.state.random.map(s => {
-            return render(<li key={s.id}>{s.value}</li>);
-          })}
-        </ul>
+        <img src={this.state.icon} />
+        <p>{this.state.random}</p>
       </div>
     );
   }
