@@ -1,24 +1,25 @@
+
 import React from 'react'
 import {render} from 'react-dom'
 import {createStore} from 'redux'
 import reducers from './reducers'
 import {Provider} from 'react-redux'
-
-
+import thunkMiddleware from 'redux-thunk'
 
 import App from './components/App'
 
-const store = createStore(reducers,
-  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
-)
 
-document.addEventListener('DOMContentLoaded', () => {
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
+const store = createStore(reducers, composeEnhancers(
+  applyMiddleware(thunkMiddleware)
+))
+
+
+document.addEventListener("DOMContentLoaded", () => {
   render(
     <Provider store={store}>
       <App />
-    </Provider>
-    ,
-    document.getElementById('app')
-  )
-})
- 
+    </Provider>,
+    document.getElementById("app")
+  );
+});

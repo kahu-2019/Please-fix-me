@@ -1,7 +1,8 @@
 import React from 'react'
-import {NewBusinessPlan} from './BusinessPlan'
+import {Link} from 'react-dom'
 
-// This might need to be turned into a stateful (class-based) component
+import Becs from './Becs'
+import {NewBusinessPlan} from './BusinessPlan'
 
 class App extends React.Component {
   constructor(props) {
@@ -11,21 +12,27 @@ class App extends React.Component {
     }
 
   }
-
-  render() {
+  
+  render(){
     return(
-      <div className='app'>
-        <h1>Please Fix Me - I is broked</h1>
+      <Fragment>
+        <div className='app'>
+          <h1>Please Fix Me - I is broked</h1>
         <div className='karl'></div>
-        <div className='miju'></div>
-        <div className='becs'></div>
+
+        <div className='miju'>
+        </div>
+
+        <div className='becs'>
+          <button>
+            <Link to='/becs' component={Becs} />
+          </button>
+        </div>
         <NewBusinessPlan className='richard'></NewBusinessPlan>
-      </div>
+
+      </Fragment>
     )
   }
 }
- 
-
-
 
 export default App
