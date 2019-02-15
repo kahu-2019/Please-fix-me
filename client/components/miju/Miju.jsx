@@ -1,8 +1,8 @@
 import React from "react";
-
+import { connect } from "react-redux";
 import request from "superagent";
 
-class Miju extends React.Componet {
+class Miju extends React.Component {
   constructor(props) {
     super(props);
 
@@ -25,7 +25,7 @@ class Miju extends React.Componet {
         <h1> Chuck Norris facts </h1>
         <ul>
           {this.state.random.map(s => {
-            return <li key={s.id}>{s.icon_url}</li>;
+            return render(<li key={s.id}>{s.value}</li>);
           })}
         </ul>
       </div>
@@ -33,4 +33,10 @@ class Miju extends React.Componet {
   }
 }
 
-export default Miju;
+const mapStateToProps = state => {
+  return {
+    currentPage: state.currentPage
+  };
+};
+
+export default connect(mapStateToProps)(Miju);

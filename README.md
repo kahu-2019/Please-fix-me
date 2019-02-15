@@ -1,20 +1,11 @@
-# Sweet As Beers
+# Please Fix Me
 
-In this challenge you'll build part of a fictitious clearing house for beer - specifically the product listing and shopping cart pages.
-
+This site is intended to make ourselves feel good
 
 ## Setup
 
-After cloning this repo
-
-```sh
-cd sweet-as-beers && yarn
-yarn start
-```
-
-Make sure you can go to [http://localhost:3000/designs/listing.html](http://localhost:3000/designs/listing.html) and see the page. Any change to the server will cause a restart and any change to client code will rebuild `bundle.js`.
-
-
+The instructions below are an example from sweet-as-beers challenge, but they are useful none-the-less.
+Happy coding! :smiley:
 ## Listing
 
 The files that create the initial experience are `public/designs/listing.html` and `public/designs/cart.html` along with the associated CSS styles. Start with creating React components for the listing. This will probably translate to the following components:
