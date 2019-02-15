@@ -1,7 +1,11 @@
-import {combineReducers} from 'redux'
+import { combineReducers } from "redux";
 
+import miju from "./miju";
 // import otherReducer from './other-reducer'
 
-export default combineReducers({
+const reducers = combineReducers({
   // otherReducer
-})
+  miju
+});
+
+export default reducers;
