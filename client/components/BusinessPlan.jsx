@@ -24,6 +24,7 @@ export class NewBusinessPlan extends React.Component {
   handleClick(e) {
     console.log(e)
     e.preventDefault();
+
     console.log('The link was clicked.');
   }
 
@@ -35,6 +36,7 @@ export class NewBusinessPlan extends React.Component {
       <React.Fragment>
         <div className="richard-component">
           {this.state.quote && <div className="grid-item-rick" onClick={this.handleClick}><p>So basically, it's like a {this.state.quote.this} for {this.state.quote.that}</p></div>}
+          <button onClick={this.handleClick}>Click</button>
         </div>
       </React.Fragment>
     )

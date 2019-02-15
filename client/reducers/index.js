@@ -1,7 +1,7 @@
-// import {combineReducers} from 'redux'
+import {combineReducers} from 'redux'
 
-// // import otherReducer from './other-reducer'
+import onRichard from './onRichard'
 
-// export default combineReducers({
-//   // otherReducer
-// })
+export default combineReducers({
+  onRichard
+})
