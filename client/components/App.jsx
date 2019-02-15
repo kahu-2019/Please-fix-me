@@ -2,8 +2,16 @@ import React from 'react'
 import {Link} from 'react-dom'
 
 import Becs from './Becs'
+import {NewBusinessPlan} from './BusinessPlan'
 
 class App extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      onRichard: false
+    }
+
+  }
   
   render(){
     return(
@@ -13,7 +21,6 @@ class App extends React.Component {
         <div className='karl'></div>
 
         <div className='miju'>
-        
         </div>
 
         <div className='becs'>
@@ -21,9 +28,8 @@ class App extends React.Component {
             <Link to='/becs' component={Becs} />
           </button>
         </div>
+        <NewBusinessPlan className='richard'></NewBusinessPlan>
 
-        <div className='richard'></div>
-        </div>
       </Fragment>
     )
   }
