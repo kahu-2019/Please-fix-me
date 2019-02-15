@@ -1,4 +1,5 @@
 import React from 'react'
+import {NewBusinessPlan} from './BusinessPlan'
 
 // This might need to be turned into a stateful (class-based) component
 const App = () => (
@@ -7,7 +8,7 @@ const App = () => (
     <div className='karl'></div>
     <div className='miju'></div>
     <div className='becs'></div>
-    <div className='richard'></div>
+    <NewBusinessPlan className='richard'></NewBusinessPlan>
   </div>
 )
 
