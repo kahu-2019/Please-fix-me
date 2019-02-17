@@ -15,14 +15,17 @@ class App extends React.Component {
               <div className='karl'></div>
 
               <div className='miju'> 
-                <Miju />
+                <Route path='/miju' component={Miju} />
               </div>
-
               <div className='becs'>
                 <Route path='/becs' component={Becs} />
               </div>
+              <div className='richard'>
+                <Route path='/richard' component={NewBusinessPlan} />
+              </div>
+              <Link to='/miju'>Miju</Link>
               <Link to='/becs'>Becs</Link>
-              <NewBusinessPlan className='richard'></NewBusinessPlan>
+              <Link to='/richard'>Richard</Link>
             </div>
           </Router>
         </Fragment>
