@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {Fragment} from 'react'
 import {Link} from 'react-dom'
 
 import Becs from './Becs'
@@ -18,18 +18,17 @@ class App extends React.Component {
       <Fragment>
         <div className='app'>
           <h1>Please Fix Me - I is broked</h1>
-        <div className='karl'></div>
+          <div className='karl'></div>
 
-        <div className='miju'>
+          <div className='miju'> </div>
+
+          <div className='becs'>
+            <button>
+              <Link to='/becs' component={Becs} />
+            </button>
+          </div>
+          <NewBusinessPlan className='richard'></NewBusinessPlan>
         </div>
-
-        <div className='becs'>
-          <button>
-            <Link to='/becs' component={Becs} />
-          </button>
-        </div>
-        <NewBusinessPlan className='richard'></NewBusinessPlan>
-
       </Fragment>
     )
   }
