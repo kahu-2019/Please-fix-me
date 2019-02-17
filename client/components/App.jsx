@@ -2,8 +2,8 @@ import React, {Fragment} from 'react'
 import {HashRouter as Router, Route, Link} from 'react-router-dom'
 
 import Becs from './Becs'
-import Miju from "./miju/Miju";
-import {NewBusinessPlan} from './BusinessPlan'
+import Miju from "./Miju"
+import Richard from './Richard'
 
 class App extends React.Component {
   render(){
@@ -21,7 +21,7 @@ class App extends React.Component {
                 <Route path='/becs' component={Becs} />
               </div>
               <div className='richard'>
-                <Route path='/richard' component={NewBusinessPlan} />
+                <Route path='/richard' component={Richard} />
               </div>
               <Link to='/miju'>Miju</Link>
               <Link to='/becs'>Becs</Link>

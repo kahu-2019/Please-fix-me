@@ -2,7 +2,7 @@ import React from 'react'
 
 import BusinessPlan from '../api/richard'
 
-export class NewBusinessPlan extends React.Component {
+export default class Richard extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
