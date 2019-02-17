@@ -5,14 +5,6 @@ import Becs from './Becs'
 import {NewBusinessPlan} from './BusinessPlan'
 
 class App extends React.Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      onRichard: false
-    }
-
-  }
-  
   render(){
     return(
         <Fragment>
