@@ -1,11 +1,9 @@
 import { combineReducers } from "redux";
 
 import miju from "./miju";
-// import otherReducer from './other-reducer'
+import onRichard from './onRichard'
 
-const reducers = combineReducers({
-  // otherReducer
+export default combineReducers({
+  onRichard,
   miju
-});
-
-export default reducers;
+})
