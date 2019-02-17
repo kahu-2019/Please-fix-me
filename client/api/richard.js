@@ -3,7 +3,7 @@ import request from 'superagent';
 
 function BusinessPlan() {
 
-  return request.get('http://itsthisforthat.com/api.php?json')
+  return request.get('/quote')
     .then(res => {
       const plan = res.text
       return plan

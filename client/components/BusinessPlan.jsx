@@ -12,20 +12,22 @@ export class NewBusinessPlan extends React.Component {
   }
 
   componentDidMount() {
-    BusinessPlan()
-      .then((plan) => {
-        this.setState({
-          quote: JSON.parse(plan)
-        })
-      }
-      )
+    this.getBusinessPlan()
   }
 
   handleClick(e) {
     console.log(e)
     e.preventDefault();
+    this.getBusinessPlan()
+  }
 
-    console.log('The link was clicked.');
+  getBusinessPlan() {
+    BusinessPlan()
+      .then((plan) => {
+        this.setState({
+          quote: JSON.parse(plan)
+        })
+      })
   }
 
   render() {
