@@ -13,8 +13,11 @@ class Miju extends React.Component {
   }
 
   componentDidMount() {
+    this.loadFact()
+  }
+
+  loadFact() {
     request.get("https://api.chucknorris.io/jokes/random ").then(res => {
-      console.log(res);
       this.setState({
         random: res.body.value,
         icon: res.body.icon_url
@@ -22,12 +25,10 @@ class Miju extends React.Component {
     });
   }
   render() {
-    console.log(this.state.random);
     return (
-      <div>
-        <h1> Chuck Norris facts </h1>
+      <div onClick={this.loadFact.bind(this)}>
         <img src={this.state.icon} />
-        <p>{this.state.random}</p>
+        {this.state.random}
       </div>
     );
   }
